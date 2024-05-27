@@ -1,1 +1,20 @@
+# check existing IP address
+ip addr
+
+# see existing network configuration
+cat /etc/netplan/01-netcfg.yaml
+
+# edit network configuration
+nano /etc/netplan/01-netcfg.yaml
+
+# check for examples: https://github.com/canonical/netplan/tree/main/examples
+
+# apply changes to network configuration
+netplan apply
+
+# resolving openvswitch-switch-dpdk error
+sudo apt upgrade
+sudo apt install openvswitch-switch-dpdk
+sudo netplan apply
+
 
