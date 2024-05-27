@@ -1,3 +1,6 @@
+# install net-tools
+sudo apt-get install net-tools
+
 # check existing IP address
 ip addr
 
