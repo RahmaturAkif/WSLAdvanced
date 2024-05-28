@@ -24,4 +24,29 @@ sudo apt install openvswitch-switch-dpdk
 sudo netplan apply
 
 #ip
-#172.18.176.1
+#172.18.176.1 example1
+network:
+  version: 2
+  renderer: networkd
+  ethernets:
+    enp3s0:
+     addresses:
+       - 10.100.1.38/24
+       - 10.100.1.39/24
+     routes:
+       - to: default
+         via: 10.100.1.1
+
+#172.18.176.1 example2
+network:
+  version: 2
+  renderer: networkd
+  ethernets:
+    eno1:
+     dhcp4: true
+     addresses:
+       - 10.100.1.38/24
+       - 10.100.1.39/24
+     routes:
+       - to: default
+         via: 10.100.1.1
