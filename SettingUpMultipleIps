@@ -15,9 +15,13 @@ nano /etc/netplan/01-netcfg.yaml
 # apply changes to network configuration
 netplan apply
 
+# netplan error
+sudo chmod 600 /etc/netplan/01-netcfg.yaml
+
 # resolving openvswitch-switch-dpdk error
 sudo apt upgrade
 sudo apt install openvswitch-switch-dpdk
 sudo netplan apply
 
-
+#ip
+#172.18.176.1
