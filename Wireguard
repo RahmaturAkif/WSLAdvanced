@@ -4,10 +4,16 @@ ip link add dev wg0 type wireguard
 
 # wg set wg0 listen-port 51820 private-key /path/to/private-key peer ABCDEF... allowed-ips 192.168.88.0/24 endpoint 209.202.254.14:8172
 
-wg set wg0 listen-port 51820 private-key /etc/wireguard/privatekey peer D9myUw1V14LApTC5V8qVsXlxHov/1bnPgKrIehKSyR8= public-key /etc/wireguard/publickey allowed-ips 10.21.158.91 endpoint de.wg.finevpn.org:993 
+wg set wg0 listen-port 51820 private-key /etc/wireguard/privatekey peer D9myUw1V14LApTC5V8qVsXlxHov/1bnPgKrIehKSyR8= allowed-ips 10.21.158.91 endpoint de.wg.finevpn.org:993 persistent-keepalive 21
+
+wg set wg0 listen-port 51820 private-key /etc/wireguard/privatekey peer D9myUw1V14LApTC5V8qVsXlxHov/1bnPgKrIehKSyR8= allowed-ips 0.0.0.0/0 endpoint de.wg.finevpn.org:993 persistent-keepalive 21 
+
+public-key /etc/wireguard/publickey
+
+D9myUw1V14LApTC5V8qVsXlxHov/1bnPgKrIehKSyR8=
 
 #An IP address and peer can be assigned
-ip address add dev wg0 192.168.2.1/24
+ip address add dev wg0 10.21.158.91
 
 #Finally, the interface can then be activated
 ip link set up dev wg0
