@@ -28,3 +28,4 @@ ip route add 193.151.189.10/32 via 172.18.182.191 dev eth0
  wsl --import ubuntu2 "E:\wsl\distro\ubuntu2\" "E:\wsl\distro\ubuntu2\ubuntu2.tar"
 
 apt update
+apt upgrade
