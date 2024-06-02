@@ -1,0 +1,2 @@
+Wireguard
+wg set wg0 listen-port 51820 private-key /etc/wireguard/privatekey peer D9myUw1V14LApTC5V8qVsXlxHov/1bnPgKrIehKSyR8= allowed-ips 10.21.158.91 endpoint de.wg.finevpn.org:993
