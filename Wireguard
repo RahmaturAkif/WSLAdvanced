@@ -18,3 +18,11 @@ ip address add dev wg0 10.21.158.91
 #Finally, the interface can then be activated
 ip link set up dev wg0
 
+#Routing
+
+eth0 172.18.182.191
+endpoint 193.151.189.10:993
+
+ip route add 193.151.189.10/32 via 172.18.182.191 dev eth0
+
+ wsl --import ubuntu2 "E:\wsl\distro\ubuntu2\" "E:\wsl\distro\ubuntu2\ubuntu2.tar"
