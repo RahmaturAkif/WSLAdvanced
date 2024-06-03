@@ -28,7 +28,7 @@ ip route add 193.151.189.10/32 via 172.18.182.191 dev eth0
 
 --export <Distro> <FileName>
 
-wsl --export ubuntu2 "E:\wsl\distro\ubuntu3\" "E:\wsl\distro\ubuntu3\ubuntu3.tar"
+wsl --export ubuntu2 "E:\wsl\distro\ubuntu3\ubuntu3.tar"
 
 --import <Distro> <InstallLocation> <FileName>
 
