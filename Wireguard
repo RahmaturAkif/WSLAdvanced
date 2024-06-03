@@ -1,5 +1,15 @@
 https://learn.microsoft.com/en-us/windows/wsl/networking
 
+
+yourPortToForward = 49242
+yourPortToConnectToInWSL= 
+wsl hostname = 10.21.158.91
+connectport=49242
+
+listenaddress=0.0.0.0 
+<yourPortToConnectToInWSL
+netsh interface portproxy add v4tov4 listenport=8.8.8.8 listenaddress=0.0.0.0 connectport=49242 connectaddress=10.21.158.91
+netsh interface portproxy add v4tov4 listenport =<yourPortToForward> listenaddress=0.0.0.0 connectport=<yourPortToConnectToInWSL> connectaddress=(wsl hostname -I)
 Wireguard wg-quick
 https://github.com/burghardt/easy-wg-quick
 
@@ -43,7 +53,7 @@ wsl --export ubuntu2 "E:\wsl\distro\ubuntu3\ubuntu3.tar"
 
 --import <Distro> <InstallLocation> <FileName>
 
-wsl --import ubuntu3 "E:\wsl\distro\ubuntu3\" "E:\wsl\distro\ubuntu3\ubuntu3.tar"
+wsl --import ubuntu4 "E:\wsl\distro\ubuntu4\" "E:\wsl\distro\ubuntu4\ubuntu4.tar"
 
 
 apt update
