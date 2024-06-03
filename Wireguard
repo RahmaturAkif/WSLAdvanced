@@ -1,4 +1,12 @@
-Wireguard
+Wireguard wg-quick
+https://github.com/burghardt/easy-wg-quick
+
+ 
+apt install openresolv
+wg-quick up /etc/wireguard/jp.conf
+
+Wireguard wg
+ 
 # A new interface can be added
 ip link add dev wg0 type wireguard
 
