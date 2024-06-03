@@ -41,7 +41,7 @@ wsl --export ubuntu2 "E:\wsl\distro\ubuntu3\ubuntu3.tar"
 
 --import <Distro> <InstallLocation> <FileName>
 
-wsl --import ubuntu3 "E:\wsl\distro\ubuntu3\" "E:\wsl\distro\ubuntu2\ubuntu3.tar"
+wsl --import ubuntu3 "E:\wsl\distro\ubuntu3\" "E:\wsl\distro\ubuntu3\ubuntu3.tar"
 
 
 apt update
