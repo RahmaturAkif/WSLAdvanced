@@ -25,7 +25,25 @@ endpoint 193.151.189.10:993
 
 ip route add 193.151.189.10/32 via 172.18.182.191 dev eth0
 
- wsl --import ubuntu2 "E:\wsl\distro\ubuntu2\" "E:\wsl\distro\ubuntu2\ubuntu2.tar"
+# renaming happens during import
+
+wsl --export ubuntu2 "E:\wsl\distro\ubuntu3\" "E:\wsl\distro\ubuntu3\ubuntu3.tar"
+
+wsl --import ubuntu3 "E:\wsl\distro\ubuntu3\" "E:\wsl\distro\ubuntu2\ubuntu3.tar"
+
 
 apt update
 apt upgrade
+
+# install node-js
+
+apt intall unzip
+curl -fsSL https://fnm.vercel.app/install | bash
+
+# install rust
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+
+git clone https://github.com/leon3s/wireguard-gui
+cd wireguard-gui
+npm install
+npm run dev
