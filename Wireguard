@@ -47,3 +47,4 @@ git clone https://github.com/leon3s/wireguard-gui
 cd wireguard-gui
 npm install
 npm run dev
+sudo apt install gdebi
