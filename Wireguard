@@ -1,10 +1,12 @@
+
+
 ip route show | grep -i default | awk '{ print $3}'
 
 netsh interface portproxy add v4tov4 listenport=8000 listenaddress =  192.168.9.96 connectport=8000 connectaddress=172.22.128.1
 
+netsh interface portproxy add v4tov4 listenport=8000 listenaddress =  192.168.9.96 connectport=8000 connectaddress=10.21.158.91
+
 netsh interface portproxy show v4tov4
-
-
 
 https://learn.microsoft.com/en-us/windows/wsl/networking
 
