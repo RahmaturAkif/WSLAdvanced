@@ -1,4 +1,6 @@
- wsl hostname -I
+https://superuser.com/questions/1582234/make-ip-address-of-wsl2-static
+
+wsl hostname -I
 
 ip route show | grep -i default | awk '{ print $3}'
 
