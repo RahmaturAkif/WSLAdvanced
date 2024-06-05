@@ -2,6 +2,11 @@ https://superuser.com/questions/1582234/make-ip-address-of-wsl2-static
 
 #netsh
 
+sudo ip addr add 192.168.99.2/24 broadcast 192.168.99.255 dev eth0 label eth0:1;
+de-wg-finevpn
+
+sudo ip addr add 10.21.158.91/24 broadcast 10.21.158.91 dev de-wg-finevpn label de-wg-finevpn:1;
+
 netsh interface ip set address "vEthernet (WSL)" static 10.21.158.91 255.255.255.0
 netsh interface ip set dns "vEthernet (WSL)" static 8.8.8.8
 netsh interface ip show config
