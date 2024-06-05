@@ -1,5 +1,11 @@
 https://superuser.com/questions/1582234/make-ip-address-of-wsl2-static
 
+#netsh
+
+netsh interface ip set address "vEthernet (WSL)" static 10.21.158.91 255.255.255.0
+netsh interface ip set dns "vEthernet (WSL)" static 8.8.8.8
+netsh interface ip show config
+
 wsl hostname -I
 
 ip route show | grep -i default | awk '{ print $3}'
